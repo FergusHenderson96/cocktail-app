@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import CocktailName from './components/CocktailName';
 import CocktailIngredient from './components/CocktailIngredient';
 import RandomCocktail from './components/RandomCocktail';
+import './App.css'
   
 class App extends Component{
 
@@ -31,11 +32,11 @@ randomCocktail = () => {
 
   render () {
   return (
-    <div>
-    <h1>Cocktail Index</h1> 
+  <div className="body">
+    <h1 className="heading">Cocktail Index</h1> 
 
-     <div>
-    <button onClick={this.randomCocktail}>Random</button>   
+     <div className="options">
+    <button className="button" onClick={this.randomCocktail}>Random</button>   
     {this.state.random ? (
       <div>Generate a random cocktail</div>
     ) : (
@@ -45,8 +46,8 @@ randomCocktail = () => {
     )}
       </div>
 <br/>
-      <div>
-    <button onClick={this.nameCocktail}>Name</button>  
+      <div className="options">
+    <button className="button" onClick={this.nameCocktail}>Name</button>  
     {this.state.name ? (
         <div>Search for a cocktail by name</div>
       ) : (
@@ -56,8 +57,8 @@ randomCocktail = () => {
       )}
       </div>
 <br/>
-      <div>
-    <button onClick={this.ingredientCocktail}>Ingredient</button> 
+      <div className="options">
+    <button className="button" onClick={this.ingredientCocktail}>Ingredient</button> 
       {this.state.ingredient ? (
         <div>Search for a cocktail by ingredient</div>
       ) : (
